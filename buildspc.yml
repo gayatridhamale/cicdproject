@@ -8,17 +8,17 @@ phases:
         - sudo apt install apache2 -y
         
         
-builds:
-  commands:
+  builds:
+    commands:
       - echo building file
       - cp index.html /var/www/html/
       
       
-post_build:
-  commands:
-    - echo configured
+  post_build:
+    commands:
+      - echo configured
     
- artifacts:
-    files:
-      - "**/*"
+artifacts:
+  files:
+    - "**/*"
       
