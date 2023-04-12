@@ -1,0 +1,24 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+        - echo installing webserver
+        - sudo apt update
+        - sudo apt install apache2 -y
+        
+        
+builds:
+  commands:
+      - echo building file
+      - cp index.html /var/www/html/
+      
+      
+post_build:
+  commands:
+    - echo configured
+    
+ artifacts:
+    files:
+      - "**/*"
+      
